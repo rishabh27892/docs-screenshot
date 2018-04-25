@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="acc_user.create_user_test-20180424181956" tests="3" time="90.982">
+	<testcase classname="acc_user.create_user_test" name="test_01_nav_acc_user" time="63.279"/>
+	<testcase classname="acc_user.create_user_test" name="test_02_create_newuser" time="6.315"/>
+	<testcase classname="acc_user.create_user_test" name="test_03_close_navAccount" time="21.388"/>
+	<system-out>
+<![CDATA[ navigating to the user submenu
+the Page now is: Users
+Taking screenshot for acc_user.-test_01_nav_acc_user
+ creating a new user with create new primary group
+Taking screenshot for acc_user.-test_02_create_newuser
+ closing account menu
+Taking screenshot for acc_user.-test_03_close_navAccount
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

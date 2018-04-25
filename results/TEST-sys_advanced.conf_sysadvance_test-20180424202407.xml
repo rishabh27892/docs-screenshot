@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="sys_advanced.conf_sysadvance_test-20180424202407" tests="2" time="38.227">
+	<testcase classname="sys_advanced.conf_sysadvance_test" name="test_01_nav_system_advanced" time="31.826"/>
+	<testcase classname="sys_advanced.conf_sysadvance_test" name="test_02_close_system_tab" time="6.401"/>
+	<system-out>
+<![CDATA[the Page now is: Advanced
+Taking screenshot for sys_advance-test_01_nav_system_advanced
+Taking screenshot for sys_advance-test_02_close_system_tab
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

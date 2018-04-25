@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="unittest.suite._ErrorHolder-20180424200020" tests="1" time="0.000">
+	<testcase classname="unittest.suite._ErrorHolder" name="logout_test)" time="0.000">
+		<error message="Message: Tried to run command without establishing a connection
+" type="WebDriverException">
+<![CDATA[Traceback (most recent call last):
+  File "/home/rishabh/docs-screenshot/webui/tests/logout.py", line 44, in setUpClass
+    driver.implicitly_wait(30)
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 790, in implicitly_wait
+    'implicit': int(float(time_to_wait) * 1000)})
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: Tried to run command without establishing a connection
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

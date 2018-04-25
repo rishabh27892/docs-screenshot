@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="serv_afp.conf_afp_test-20180424202445" tests="3" time="12.325">
+	<testcase classname="serv_afp.conf_afp_test" name="test_01_nav_services" time="2.937"/>
+	<testcase classname="serv_afp.conf_afp_test" name="test_02_turnon_afp" time="4.462"/>
+	<testcase classname="serv_afp.conf_afp_test" name="test_04_turnoff_afp" time="4.925"/>
+	<system-out>
+<![CDATA[navigating to service menu
+the Page now is: Services
+Taking screenshot for serv_afp-test_01_nav_services
+ turning on the afp service
+executing the status change function with input 1 + start
+status has now changed to running
+Taking screenshot for serv_afp-test_02_turnon_afp
+ turning off the afp service
+executing the status change function with input 1 + stop
+Taking screenshot for serv_afp-test_04_turnoff_afp
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

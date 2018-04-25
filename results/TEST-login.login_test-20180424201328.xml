@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="login.login_test-20180424201328" tests="1" time="1.522">
+	<testcase classname="login.login_test" name="test_01_login" time="1.522"/>
+	<system-out>
+<![CDATA[loging in FreeNAS new webui- woot woot
+Taking screenshot for login-test_01_login
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

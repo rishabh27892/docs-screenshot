@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="sys_email.conf_system_email_test-20180424202334" tests="1" time="32.894">
+	<testcase classname="sys_email.conf_system_email_test" name="test_01_nav_system_email" time="32.894">
+		<error message="Test fail: Please check the traceback" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/rishabh/docs-screenshot/webui/tests/sys_email.py", line 66, in test_01_nav_system_email
+    self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+AssertionError: Test fail: Please check the traceback
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[the Page now is: Email
+Taking screenshot for sys_email-test_01_nav_system_email
+  File "/home/rishabh/docs-screenshot/webui/tests/sys_email.py", line 58, in test_01_nav_system_email
+    self.assertTrue("email" in page_data)
+
+  File "/usr/lib/python2.7/unittest/case.py", line 422, in assertTrue
+    raise self.failureException(msg)
+
+AssertionError: False is not true
+
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

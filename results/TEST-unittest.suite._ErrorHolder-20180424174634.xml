@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="unittest.suite._ErrorHolder-20180424174634" tests="1" time="0.000">
+	<testcase classname="unittest.suite._ErrorHolder" name="login_test)" time="0.000">
+		<error message="Message: Reached error page: about:neterror?e=netTimeout&amp;u=http%3A//10.20.21.232/ui&amp;c=UTF-8&amp;f=regular&amp;d=The%20server%20at%2010.20.21.232%20is%20taking%20too%20long%20to%20respond.
+" type="WebDriverException">
+<![CDATA[Traceback (most recent call last):
+  File "/home/rishabh/docs-screenshot/webui/tests/login.py", line 43, in setUpClass
+    driver.get(ui_url)
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 320, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: Reached error page: about:neterror?e=netTimeout&u=http%3A//10.20.21.232/ui&c=UTF-8&f=regular&d=The%20server%20at%2010.20.21.232%20is%20taking%20too%20long%20to%20respond.
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

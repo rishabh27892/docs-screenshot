@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<testsuite errors="2" failures="0" name="net_conf.conf_network_test-20180424181545" tests="2" time="62.240">
+	<testcase classname="net_conf.conf_network_test" name="test_01_nav_net_conf" time="31.130">
+		<error message="Test fail: Please check the traceback" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/rishabh/docs-screenshot/webui/tests/net_conf.py", line 73, in test_01_nav_net_conf
+    self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+AssertionError: Test fail: Please check the traceback
+]]>		</error>
+	</testcase>
+	<testcase classname="net_conf.conf_network_test" name="test_02_close_network_tab" time="31.110">
+		<error message="Test fail: Please check the traceback" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/rishabh/docs-screenshot/webui/tests/net_conf.py", line 87, in test_02_close_network_tab
+    self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+AssertionError: Test fail: Please check the traceback
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[Taking screenshot for net_conf-test_01_nav_net_conf
+  File "/home/rishabh/docs-screenshot/webui/tests/net_conf.py", line 50, in test_01_nav_net_conf
+    a = driver.find_element_by_xpath(xpaths['navNetwork'])
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 855, in find_element
+    'value': value})['value']
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+
+NoSuchElementException: Message: Unable to locate element: //*[@id="nav-4"]/div/a[1]
+
+
+Taking screenshot for net_conf-test_02_close_network_tab
+  File "/home/rishabh/docs-screenshot/webui/tests/net_conf.py", line 78, in test_02_close_network_tab
+    driver.find_element_by_xpath(xpaths['navNetwork']).click()
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 855, in find_element
+    'value': value})['value']
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+
+  File "/usr/local/lib/python2.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+
+NoSuchElementException: Message: Unable to locate element: //*[@id="nav-4"]/div/a[1]
+
+
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="serv_iscsi.conf_iscsi_test-20180424202632" tests="2" time="11.599">
+	<testcase classname="serv_iscsi.conf_iscsi_test" name="test_01_turnon_iscsi" time="6.659"/>
+	<testcase classname="serv_iscsi.conf_iscsi_test" name="test_02_turnoff_iscsi" time="4.939"/>
+	<system-out>
+<![CDATA[ turning on the iscsi service
+the Page now is: Services
+executing the status change function with input 6 + start
+status has now changed to running
+Taking screenshot for serv_iscsi-test_01_turnon_iscsi
+ turning off the iscsi service
+executing the status change function with input 6 + stop
+Taking screenshot for serv_iscsi-test_02_turnoff_iscsi
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

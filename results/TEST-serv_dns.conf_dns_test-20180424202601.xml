@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="serv_dns.conf_dns_test-20180424202601" tests="2" time="15.523">
+	<testcase classname="serv_dns.conf_dns_test" name="test_01_turnon_dns" time="10.674"/>
+	<testcase classname="serv_dns.conf_dns_test" name="test_02_turnoff_dns" time="4.849"/>
+	<system-out>
+<![CDATA[ turning on the dns service
+the Page now is: Services
+executing the status change function with input 4 + start
+status has now changed to running
+Taking screenshot for serv_dns-test_01_turnon_dns
+ turning off the dns service
+executing the status change function with input 4 + stop
+Taking screenshot for serv_dns-test_02_turnoff_dns
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

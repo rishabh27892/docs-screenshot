@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="logout.logout_test-20180424203009" tests="1" time="8.020">
+	<testcase classname="logout.logout_test" name="test_01_logout" time="8.020"/>
+	<system-out>
+<![CDATA[ loging out of the ui, see ya
+Taking screenshot for logout-test_01_logout
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

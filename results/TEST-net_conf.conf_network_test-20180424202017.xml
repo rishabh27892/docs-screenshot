@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="net_conf.conf_network_test-20180424202017" tests="2" time="36.317">
+	<testcase classname="net_conf.conf_network_test" name="test_01_nav_net_conf" time="32.977"/>
+	<testcase classname="net_conf.conf_network_test" name="test_02_close_network_tab" time="3.341"/>
+	<system-out>
+<![CDATA[the Page now is: Configuration
+Taking screenshot for net_conf-test_01_nav_net_conf
+Taking screenshot for net_conf-test_02_close_network_tab
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

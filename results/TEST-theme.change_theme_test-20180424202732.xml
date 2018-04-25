@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="theme.change_theme_test-20180424202732" tests="8" time="157.413">
+	<testcase classname="theme.change_theme_test" name="test_01_theme1" time="4.661"/>
+	<testcase classname="theme.change_theme_test" name="test_02_theme2" time="4.679"/>
+	<testcase classname="theme.change_theme_test" name="test_03_theme3" time="34.634"/>
+	<testcase classname="theme.change_theme_test" name="test_04_theme4" time="34.651"/>
+	<testcase classname="theme.change_theme_test" name="test_05_theme5" time="34.676"/>
+	<testcase classname="theme.change_theme_test" name="test_06_theme6" time="4.719"/>
+	<testcase classname="theme.change_theme_test" name="test_07_theme7" time="34.692"/>
+	<testcase classname="theme.change_theme_test" name="test_08_theme8" time="4.701"/>
+	<system-out>
+<![CDATA[selecting theme: iX Blue
+attempting to click on theme: iX Blue
+Taking screenshot for theme-test_01_theme1
+selecting theme: Solarized Dark
+attempting to click on theme: Solarized Dark
+Taking screenshot for theme-test_02_theme2
+selecting theme: Dark Purple
+ Theme not present so making theme default ixblue
+Taking screenshot for theme-test_03_theme3
+selecting theme: Indigo
+ Theme not present so making theme default ixblue
+Taking screenshot for theme-test_04_theme4
+selecting theme: Sharks
+ Theme not present so making theme default ixblue
+Taking screenshot for theme-test_05_theme5
+selecting theme: Solarized Dark
+attempting to click on theme: Solarized Dark
+Taking screenshot for theme-test_06_theme6
+selecting theme: Dark Purple
+ Theme not present so making theme default ixblue
+Taking screenshot for theme-test_07_theme7
+selecting theme: iX Blue
+attempting to click on theme: iX Blue
+Taking screenshot for theme-test_08_theme8
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

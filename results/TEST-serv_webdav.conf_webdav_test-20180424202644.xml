@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="serv_webdav.conf_webdav_test-20180424202644" tests="3" time="14.500">
+	<testcase classname="serv_webdav.conf_webdav_test" name="test_01_turnon_webdav" time="5.805"/>
+	<testcase classname="serv_webdav.conf_webdav_test" name="test_02_configure_webdav" time="3.613"/>
+	<testcase classname="serv_webdav.conf_webdav_test" name="test_03_turnoff_webdav" time="5.082"/>
+	<system-out>
+<![CDATA[ turning on the webdav service
+the Page now is: Services
+executing the status change function with input 17 + start
+status has now changed to running
+Taking screenshot for serv_webdav-test_01_turnon_webdav
+ configuring webdav service
+Taking screenshot for serv_webdav-test_02_configure_webdav
+ turning off the webdav service
+executing the status change function with input 17 + stop
+Taking screenshot for serv_webdav-test_03_turnoff_webdav
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
