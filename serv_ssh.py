@@ -65,11 +65,6 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" turning on the ssh service")
-            # scroll down
-            driver.find_element_by_tag_name('body').send_keys(Keys.END)
-            time.sleep(2)
-            self.status_change("14", "start")
             # Taking screenshot
             self.screenshot("_")
         except Exception:
@@ -81,7 +76,7 @@ class conf_ssh_test(unittest.TestCase):
 
     def test_02_configure_afp(self):
         try:
-            print (" configuring ssh service with root access")
+            print (" configuring afp service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton1']).click()
@@ -99,7 +94,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring smb service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton2']).click()
@@ -117,7 +112,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring dc service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton3']).click()
@@ -135,7 +130,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring dns service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton4']).click()
@@ -149,7 +144,7 @@ class conf_ssh_test(unittest.TestCase):
             self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
     def test_06_configure_ftp(self):
         try:
-            print (" configuring ssh service with root access")
+            print (" configuring ftp service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton5']).click()
@@ -167,7 +162,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring iscsi service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton6']).click()
@@ -181,7 +176,7 @@ class conf_ssh_test(unittest.TestCase):
             self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
     def test_08_configure_lldp(self):
         try:
-            print (" configuring ssh service with root access")
+            print (" configuring lldp service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton7']).click()
@@ -199,7 +194,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring netdata service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton8']).click()
@@ -217,7 +212,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring nfs service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton9']).click()
@@ -235,7 +230,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring rsync service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton10']).click()
@@ -253,7 +248,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring s3 service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton11']).click()
@@ -271,7 +266,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring S.M.A.R.T service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton12']).click()
@@ -289,7 +284,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring snmp service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton13']).click()
@@ -307,7 +302,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring ssh service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton14']).click()
@@ -325,7 +320,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring tftp service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton15']).click()
@@ -343,7 +338,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring ups service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton16']).click()
@@ -361,7 +356,7 @@ class conf_ssh_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" configuring ssh service with root access")
+            print (" configuring webdav service")
             time.sleep(2)
             # click on configure button
             driver.find_element_by_xpath(xpaths['configButton17']).click()
