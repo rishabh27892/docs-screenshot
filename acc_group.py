@@ -1,7 +1,7 @@
 # Author: Rishabh Chauhan
 # License: BSD
 # Location for tests  of FreeNAS new GUI
-# Test case count: 5
+# Test case count: 3
 
 from source import *
 from selenium.webdriver.common.keys import Keys

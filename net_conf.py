@@ -56,13 +56,6 @@ class conf_network_test(unittest.TestCase):
             # cancelling the tour
             if self.is_element_present(By.XPATH,"/html/body/div[6]/div[1]/button"):
                 driver.find_element_by_xpath("/html/body/div[6]/div[1]/button").click()
-            # get the ui element
-            ui_element=driver.find_element_by_xpath("//*[@id='breadcrumb-bar']/ul/li[2]/a")
-            # get the weather data
-            page_data=ui_element.text
-            print ("the Page now is: " + page_data)
-            # assert response
-            self.assertTrue("Configuration" in page_data)
             # Taking screenshot
             self.screenshot("_")
         except Exception:
