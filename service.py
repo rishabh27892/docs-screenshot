@@ -1,7 +1,7 @@
 # Author: Rishabh Chauhan
 # License: BSD
 # Location for tests  of FreeNAS new GUI
-# Test case count: 5
+# Test case count: 18
 
 from source import *
 from selenium.webdriver.common.keys import Keys
@@ -31,7 +31,6 @@ except ImportError:
 
 
 xpaths = { 'navService' : '//*[@id="nav-8"]/div/a[1]',
-          'turnoffConfirm' : '//*[contains(text(), "OK")]',
           'configButton1' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[1]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
           'configButton2' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[2]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
           'configButton3' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[3]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
@@ -49,10 +48,9 @@ xpaths = { 'navService' : '//*[@id="nav-8"]/div/a[1]',
           'configButton15' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[15]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
           'configButton16' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[16]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
           'configButton17' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[17]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
-          'rootCheckbox' : '//*[@id="ssh_rootlogin"]/mat-checkbox/label/div'
          }
 
-class conf_ssh_test(unittest.TestCase):
+class service_test(unittest.TestCase):
     @classmethod
     def setUpClass(inst):
         driver.implicitly_wait(30)
@@ -433,8 +431,8 @@ class conf_ssh_test(unittest.TestCase):
         pass
 
 
-def run_conf_ssh_test(webdriver):
+def run_service_test(webdriver):
     global driver
     driver = webdriver
-    suite = unittest.TestLoader().loadTestsFromTestCase(conf_ssh_test)
+    suite = unittest.TestLoader().loadTestsFromTestCase(service_test)
     xmlrunner.XMLTestRunner(output=results_xml, verbosity=2).run(suite)
