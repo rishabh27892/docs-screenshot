@@ -9,14 +9,7 @@ from login import run_login_test
 from acc_group import run_create_group_test
 from acc_user import run_create_user_test
 from net_conf import run_conf_network_test
-from serv_ssh import run_conf_ssh_test
-from serv_afp import run_conf_afp_test
-from serv_dns import run_conf_dns_test
-from serv_ftp import run_conf_ftp_test
-from serv_iscsi import run_conf_iscsi_test
-from serv_lldp import run_conf_lldp_test
-from serv_dc import run_conf_dc_test
-from serv_webdav import run_conf_webdav_test
+from service import run_service_test
 from sys_update import run_check_update_test
 from sys_email import run_conf_email_test
 from sys_advanced import run_conf_sysadvance_test
