@@ -19,15 +19,7 @@ from login import run_login_test
 from acc_group import run_create_group_test
 from acc_user import run_create_user_test
 from net_conf import run_conf_network_test
-from serv_ssh import run_conf_ssh_test
-from serv_afp import run_conf_afp_test
-from serv_smb import run_conf_smb_test
-from serv_dns import run_conf_dns_test
-from serv_ftp import run_conf_ftp_test
-from serv_iscsi import run_conf_iscsi_test
-from serv_lldp import run_conf_lldp_test
-from serv_dc import run_conf_dc_test
-from serv_webdav import run_conf_webdav_test
+from service import run_service_test
 from sys_update import run_check_update_test
 from sys_email import run_conf_email_test
 from sys_advanced import run_conf_sysadvance_test
@@ -120,19 +112,10 @@ except NameError:
     run_check_update_test(runDriver)
     run_conf_email_test(runDriver)
     run_conf_sysadvance_test(runDriver)
-    run_conf_afp_test(runDriver)
-    run_conf_smb_test(runDriver)
-    run_conf_dc_test(runDriver)
-    run_conf_dns_test(runDriver)
-    run_conf_ftp_test(runDriver)
-    run_conf_iscsi_test(runDriver)
-# temporary shutdown 
-#    run_conf_lldp_test(runDriver)
-#    run_conf_ssh_test(runDriver)
-    run_conf_webdav_test(runDriver)
+    run_service_test(runDriver)
     run_view_guide_test(runDriver)
-#    run_edit_test(runDriver)
-#    run_delete_test(runDriver)
+    run_edit_test(runDriver)
+    run_delete_test(runDriver)
     run_change_theme_test(runDriver)
 else:
     if (test_name == "account"):
@@ -149,15 +132,7 @@ else:
         run_conf_sysadvance_test(runDriver)
     elif (test_name == "service"):
         print ("Running: Guide Tests")
-        run_conf_afp_test(runDriver)
-        run_conf_smb_test(runDriver)
-        run_conf_dc_test(runDriver)
-        run_conf_dns_test(runDriver)
-        run_conf_ftp_test(runDriver)
-        run_conf_iscsi_test(runDriver)
-        run_conf_lldp_test(runDriver)
-        run_conf_ssh_test(runDriver)
-        run_conf_webdav_test(runDriver)
+        run_service_test(runDriver)
     elif (test_name == "guide"):
         print ("Running: Guide Tests")
         run_view_guide_test(runDriver)
@@ -173,7 +148,7 @@ run_logout_test(runDriver)
 
 # cleaning up files
 if path.exists('driver.pyc'):
-    call(["rm", "driver.pyc"])
+    call(["rm", "*.pyc"])
 
 if path.exists('driverU.pyc'):
     call(["rm", "driverU.pyc"])
