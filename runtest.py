@@ -26,7 +26,6 @@ from sys_advanced import run_conf_sysadvance_test
 from guide import run_view_guide_test
 from acc_edit import run_edit_test
 from acc_delete import run_delete_test
-from theme import run_change_theme_test
 from logout import run_logout_test
 import sys
 sys.stdout.flush()
@@ -57,7 +56,7 @@ if len(argument) == 1:
 
 # list of argument that should be use.
 optionlist = ["ip=", "test-name=", "driver="]
-testlist = ["account", "network", "system", "guide", "service", "theme"]
+testlist = ["account", "network", "system", "guide", "service"]
 versionlist = ["U"]
 # look if all the argument are there.
 try:
@@ -116,7 +115,6 @@ except NameError:
     run_view_guide_test(runDriver)
     run_edit_test(runDriver)
     run_delete_test(runDriver)
-    run_change_theme_test(runDriver)
 else:
     if (test_name == "account"):
         print ("Running: Accounts Test")
@@ -136,9 +134,6 @@ else:
     elif (test_name == "guide"):
         print ("Running: Guide Tests")
         run_view_guide_test(runDriver)
-    elif (test_name == "theme"):
-        print ("Running: Theme Tests")
-        run_change_theme_test(runDriver)
 
 run_logout_test(runDriver)
 # turning off autoflush, the default mode

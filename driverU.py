@@ -15,7 +15,6 @@ from sys_email import run_conf_email_test
 from sys_advanced import run_conf_sysadvance_test
 from acc_edit import run_edit_test
 from acc_delete import run_delete_test
-from theme import run_change_theme_test
 from guide import run_view_guide_test
 from logout import run_logout_test
 from os import path
