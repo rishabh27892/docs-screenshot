@@ -32,7 +32,23 @@ except ImportError:
 
 xpaths = { 'navService' : '//*[@id="nav-8"]/div/a[1]',
           'turnoffConfirm' : '//*[contains(text(), "OK")]',
-          'configButton' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[14]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton1' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[1]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton2' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[2]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton3' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[3]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton4' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[4]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton5' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[5]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton6' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[6]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton7' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[7]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton8' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[8]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton9' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[9]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton10' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[10]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton11' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[11]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton12' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[12]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton13' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[13]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton14' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[14]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton15' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[15]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton16' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[16]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
+          'configButton17' : '/html/body/app-root/app-admin-layout/mat-sidenav-container/mat-sidenav-content/div/services/div/div[17]/entity-card/div[1]/div/mat-card[1]/div/div[2]/div[3]/button',
           'rootCheckbox' : '//*[@id="ssh_rootlogin"]/mat-checkbox/label/div'
          }
 
@@ -43,7 +59,7 @@ class conf_ssh_test(unittest.TestCase):
         pass
 
 
-    def test_01_turnon_ssh (self):
+    def test_01_nav_service (self):
         try:
             # click Service Menu
             driver.find_element_by_xpath(xpaths['navService']).click()
@@ -63,12 +79,12 @@ class conf_ssh_test(unittest.TestCase):
                 print (exc_info_p[i])
             self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
 
-    def test_02_configure_ssh(self):
+    def test_02_configure_afp(self):
         try:
             print (" configuring ssh service with root access")
             time.sleep(2)
             # click on configure button
-            driver.find_element_by_xpath(xpaths['configButton']).click()
+            driver.find_element_by_xpath(xpaths['configButton1']).click()
             # Taking screenshot
             self.screenshot("_")
         except Exception:
@@ -77,18 +93,278 @@ class conf_ssh_test(unittest.TestCase):
             for i in range(1,len(exc_info_p)):
                 print (exc_info_p[i])
             self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
-
-    def test_03_turnoff_ssh(self):
+    def test_03_configure_smb(self):
         try:
             # click Service Menu
             driver.find_element_by_xpath(xpaths['navService']).click()
             # allowing the button to load
             time.sleep(1)
-            print (" turning off the ssh service")
-            # scroll down
-            driver.find_element_by_tag_name('html').send_keys(Keys.END)
+            print (" configuring ssh service with root access")
             time.sleep(2)
-            self.status_change("14", "stop")
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton2']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_04_configure_dc(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton3']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_05_configure_dns(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton4']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_06_configure_ftp(self):
+        try:
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton5']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_07_configure_iscsi(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton6']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_08_configure_lldp(self):
+        try:
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton7']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_09_configure_netdata(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton8']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_10_configure_nfs(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton9']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_11_configure_rsync(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton10']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_12_configure_s3(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton11']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_13_configure_SMART(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton12']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_14_configure_snmp(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton13']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_15_configure_ssh(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton14']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_16_configure_tftp(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton15']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_17_configure_ups(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton16']).click()
+            # Taking screenshot
+            self.screenshot("_")
+        except Exception:
+            exc_info_p = traceback.format_exception(*sys.exc_info())
+            self.screenshot("-e")
+            for i in range(1,len(exc_info_p)):
+                print (exc_info_p[i])
+            self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
+    def test_02_configure_webdav(self):
+        try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
+            print (" configuring ssh service with root access")
+            time.sleep(2)
+            # click on configure button
+            driver.find_element_by_xpath(xpaths['configButton17']).click()
             # Taking screenshot
             self.screenshot("_")
         except Exception:
