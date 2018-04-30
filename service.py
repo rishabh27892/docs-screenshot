@@ -142,6 +142,10 @@ class service_test(unittest.TestCase):
             self.assertEqual("Just for fail", str(Exception), msg="Test fail: Please check the traceback")
     def test_06_configure_ftp(self):
         try:
+            # click Service Menu
+            driver.find_element_by_xpath(xpaths['navService']).click()
+            # allowing the button to load
+            time.sleep(1)
             print (" configuring ftp service")
             time.sleep(2)
             # click on configure button
@@ -198,6 +202,8 @@ class service_test(unittest.TestCase):
             driver.find_element_by_xpath(xpaths['configButton8']).click()
             # Taking screenshot
             self.screenshot("_")
+            if (self.is_element_present(By.XPATH,'//*[contains(text(), "Close")]')):
+                driver.find_element_by_xpath('//*[contains(text(), "Close")]').click()
         except Exception:
             exc_info_p = traceback.format_exception(*sys.exc_info())
             self.screenshot("-e")

@@ -147,7 +147,7 @@ run_logout_test(runDriver)
 # run_creat_nameofthetest(runDriver)
 
 # cleaning up files
-if path.exists('driver.pyc'):
+if path.exists('login.pyc'):
     call(["rm", "*.pyc"])
 
 if path.exists('geckodriver.log'):
